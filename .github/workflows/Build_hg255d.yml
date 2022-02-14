@@ -90,7 +90,7 @@ jobs:
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         #cp mac80211.sh  openwrt/package/kernel/mac80211/files/lib/wifi
-        chmod +x ./customize.sh && ./customize.sh
+        #chmod +x ./customize.sh && ./customize.sh
         cd openwrt && make defconfig
         
     - name: Download package
