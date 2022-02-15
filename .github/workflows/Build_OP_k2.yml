@@ -89,7 +89,7 @@ jobs:
 
     - name: Configuration Customization - Build_k2
       env:
-       CONFIG_FILE: 'hg255d.config'
+       CONFIG_FILE: 'k2.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         #cp mac80211.sh  openwrt/package/kernel/mac80211/files/lib/wifi
