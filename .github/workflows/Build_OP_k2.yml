@@ -62,8 +62,8 @@ jobs:
         REPO_URL:  https://github.com/openwrt/openwrt
         REPO_BRANCH: openwrt-21.02
       run: |
-        git clone -b openwrt-21.02 https://github.com/openwrt/openwrt.git openwrt
-        #git clone https://github.com/lirihw/openwrt21.02 openwrt
+        #git clone -b openwrt-21.02 https://github.com/openwrt/openwrt.git openwrt
+        git clone https://github.com/lirihw/openwrt21.02 openwrt
         #git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
         #git clone https://github.com/More-A/openwrt-ssr package/openwrt-ssr
