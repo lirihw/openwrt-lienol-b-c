@@ -66,7 +66,7 @@ jobs:
         #git clone https://github.com/lirihw/openwrt21.02 openwrt
         #git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
-        git clone https://github.com/fw876/helloworld.git ssr
+        git clone --depth=1 https://github.com/fw876/helloworld.git package/ssr
         #git clone https://github.com/More-A/openwrt-ssr package/openwrt-ssr
         #git clone https://github.com/kenzok8/openwrt-packages package/kenzok
         #git clone https://github.com/xiaorouji/openwrt-passwall package/lienol
