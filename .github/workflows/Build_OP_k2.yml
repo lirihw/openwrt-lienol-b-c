@@ -67,19 +67,21 @@ jobs:
         #git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
         git clone --depth=1 https://github.com/fw876/helloworld.git package/ssr
+        git clone  https://github.com/kenzok8/small package/small
+        git clone  https://github.com/rofl0r/microsocks package/microsocks
+        git clone  https://github.com/wltc2005/openwrt-redsocks2 package/redsocks2
         #git clone https://github.com/More-A/openwrt-ssr package/openwrt-ssr
         #git clone https://github.com/kenzok8/openwrt-packages package/kenzok
         #git clone https://github.com/xiaorouji/openwrt-passwall package/lienol
         #git clone https://github.com/kevin-morgan/luci-theme-argon-dark package/luci-theme-argon-dark
-        echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
+        #echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
         
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        rm -rf feeds/packages/lang/golang
-        svn co https://github.com/coolsnowwolf/packages/trunk/lang/golang feeds/packages/lang/golang
+     
     #- name: Import external feeds - passwall
     #working-directory: ./openwrt
     #run: |
