@@ -59,20 +59,26 @@ jobs:
         sudo -E apt-get clean
     - name: Clone source code
       env: 
-        REPO_URL:  https://github.com/openwrt/openwrt
+        REPO_URL:  https://github.com/lirihw/openwrt2102-16m
         REPO_BRANCH: openwrt-21.02
       run: |
-        git clone -b openwrt-21.02 https://github.com/openwrt/openwrt.git openwrt
-        #git clone https://github.com/lirihw/openwrt21.02 openwrt
+        #git clone -b openwrt-21.02 https://github.com/openwrt/openwrt.git openwrt
+        git clone https://github.com/lirihw/openwrt2102-16m openwrt
         #git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
-        git clone --depth=1 https://github.com/fw876/helloworld.git package/ssr
-        git clone  https://github.com/kenzok8/small package/small
-        git clone  https://github.com/rofl0r/microsocks package/microsocks
-        git clone  https://github.com/wltc2005/openwrt-redsocks2 package/redsocks2
+        git clone  https://github.com/fw876/helloworld.git package/ssr
+        git clone  https://github.com/Lienol/openwrt-package.git_url package/Lienol
+        git clone  https://github.com/xiaorouji/openwrt-passwall package/lienol
+        git clone  https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
+        #git clone  https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
+        #git clone  https://github.com/Leo-Jo-My/luci-app-vssr-plus.git package/lean/luci-vssr-plus-rely
+        #git clone  https://github.com/destan19/OpenAppFilter.git package/lean/luci-app-vssr-plus
+        
+        #git clone  https://github.com/kenzok8/small package/small
+        #git clone  https://github.com/rofl0r/microsocks package/microsocks
+        #git clone  https://github.com/wltc2005/openwrt-redsocks2 package/redsocks2
         #git clone https://github.com/More-A/openwrt-ssr package/openwrt-ssr
         #git clone https://github.com/kenzok8/openwrt-packages package/kenzok
-        #git clone https://github.com/xiaorouji/openwrt-passwall package/lienol
         #git clone https://github.com/kevin-morgan/luci-theme-argon-dark package/luci-theme-argon-dark
         #echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
         
