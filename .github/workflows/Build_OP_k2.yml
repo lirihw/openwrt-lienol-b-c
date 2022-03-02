@@ -67,7 +67,7 @@ jobs:
         #git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
         git clone  https://github.com/fw876/helloworld.git package/ssr
-        git clone  https://github.com/Lienol/openwrt-package.git_url package/Lienol
+        git clone  https://github.com/Lienol/openwrt-package.git package/Lienol
         git clone  https://github.com/xiaorouji/openwrt-passwall package/lienol
         git clone  https://github.com/jerrykuku/lua-maxminddb.git package/lean/lua-maxminddb
         #git clone  https://github.com/jerrykuku/luci-app-vssr.git package/lean/luci-app-vssr
